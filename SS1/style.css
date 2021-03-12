@@ -1,0 +1,19 @@
+h1
+{
+    color:yellowgreen;
+}
+table
+{
+    margin-left: 300px;
+    
+}
+tr
+{
+    height: 50px;
+
+}
+td
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
