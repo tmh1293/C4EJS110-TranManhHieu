@@ -258,9 +258,9 @@ function cau10()
     alert(`Cân nặng của bạn là ${weigth}kg. Chiều cao là ${height}m`);
     if(bmi<16)
     {
-        alert('Thiếu cân nặng');
+        alert('Suy dinh dưỡng');
     }
-    else if(bmi < 18.5)
+    else if(bmi <= 18.5)
     {
         alert('Thiếu cân');
     }
@@ -268,7 +268,7 @@ function cau10()
     {
         alert('Bình thường');
     }
-    else if( bmi > 25 && bmi < 30)
+    else if( bmi < 30)
     {
         alert('Thừa cân');
     }
