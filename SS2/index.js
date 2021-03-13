@@ -38,7 +38,7 @@ function cau3a()
 function cau3b()
 {
     console.clear();
-    let i = Number(prompt('Nhập 1 số bất kì: '));
+    let i = Number(prompt('Nhập 1 số bất kì:'));
     for(let x = 0;x<i;x++)
     {
         console.log(x);
