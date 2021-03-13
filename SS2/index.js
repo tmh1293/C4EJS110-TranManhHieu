@@ -119,22 +119,27 @@ function cau5()
 function cau6()
 {
     console.clear();
-    let x = Number(prompt('Nhập một số x bất kì: '));
-    if(x > 0 && x <= 4)
+    let x = Number(prompt('Nhập một số x bất kì từ 0 - 9: '));
+    if(x>9)
     {
-        alert('Nửa dưới của 9');
-    }
-    else if( x >= 5 && x < 9)
-    {
-        alert('Nửa trên của 9');
-    }
-    else if ( x == 9 )
-    {
-        alert('Bằng 9');
+        alert('Không thỏa mãn điều kiện');
+        cau6()
     }
     else
     {
-        alert('Lớn hơn 9');
+        let n=9/2;
+        if(x>n)
+        {
+            alert(`${x} là nửa trên của 9`);
+        }
+        else if(x=n)
+        {
+            alert(`${x} bằng một nửa của 9`);
+        }
+        else
+        {
+            alert(`${x} là nửa dưới của 9`);
+        }
     }
 }
 
@@ -255,7 +260,7 @@ function cau10()
     {
         alert('Thiếu cân nặng');
     }
-    else if( bmi > 16 && bmi < 18.5)
+    else if(bmi < 18.5)
     {
         alert('Thiếu cân');
     }
