@@ -93,28 +93,26 @@ function cau3f()
 
 function cau4()
 {
-    console.clear();
     let n = Number(prompt('Nhập x:'));
-    let i;
     var kq = 1;
-    for(i=1;i<=n;i++)
+    for(let i=1;i<=n;i++)
     {
         kq = kq * i;
     }
-    console.log(kq);
+    alert(`The factorial of ${n} is ${kq}`);
 }
 
 function cau5()
 {
     console.clear();
-    let yourAge = Number(promt('Nhập tuổi của bạn để xác minh: '));
+    let yourAge = Number(promt('Dưới 18 tuổi không được xem phim con heo'));
     if(yourAge >= 18)
     {
-        alert('Bạn đủ tuổi xem phim con heo');
+        alert('Bạn đủ tuổi');
     }
     else
     {
-        alert('Bạn không đủ tuổi nhưng vẫn cố tình xem phim con heo');
+        alert('Bạn không đủ tuổi truy cập nội dung này');
     }
 }
 
@@ -269,7 +267,7 @@ function cau10()
     {
         alert('Thừa cân');
     }
-    else if (bmi>=30)
+    else
     {
         alert('Béo phì');
     }
