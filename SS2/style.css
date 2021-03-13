@@ -1,0 +1,21 @@
+h1
+{
+    color:yellowgreen;
+}
+table
+{
+    margin-left: 800px;
+    
+}
+tr
+{
+    height: 50px;
+
+}
+td
+{
+    width: 100px;
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
