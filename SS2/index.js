@@ -38,7 +38,7 @@ function cau3a()
 function cau3b()
 {
     console.clear();
-    let i = Number(prompt('Nhập 1 số bất kì:'));
+    let i = Number(prompt('Nhập 1 số nguyên bất kì:'));
     for(let x = 0;x<i;x++)
     {
         console.log(x);
@@ -57,6 +57,7 @@ function cau3c()
 
 function cau3d()
 {
+
     console.clear();
     let n = Number(prompt('Nhập 1 số n bất kì: '));
     let c = Number(prompt('Nhập 1 số c bất kì: '));
@@ -105,7 +106,7 @@ function cau4()
 function cau5()
 {
     console.clear();
-    let yourAge = Number(promt('Dưới 18 tuổi không được xem phim con heo'));
+    let yourAge = Number(prompt('Dưới 18 tuổi không được xem phim con heo'));
     if(yourAge >= 18)
     {
         alert('Bạn đủ tuổi');
@@ -132,7 +133,7 @@ function cau6()
         {
             alert(`${x} là nửa trên của 9`);
         }
-        else if(x=n)
+        else if(x==n)
         {
             alert(`${x} bằng một nửa của 9`);
         }
@@ -204,13 +205,11 @@ function cau9b()
 { 
     console.clear();
     let x = Number(prompt('Nhập 1 số bất kì để in L với H'));
-    let l;
-    let h;
-    for(l=0;l<x/2;l++)
+    for(let l=0;l<x/2;l++)
     {
         console.log('L');
     }
-    for(h=0;h<x-l;h++)
+    for(let h=0;h<x-l;h++)
     {
         console.log('H');
     }
@@ -264,7 +263,7 @@ function cau10()
     {
         alert('Thiếu cân');
     }
-    else if( bmi > 18.5 && bmi < 25)
+    else if(bmi < 25)
     {
         alert('Bình thường');
     }
