@@ -999,34 +999,30 @@ function cau3()
     }
 }
 
-
-
-
-
-
-
 //4
-let data1 = {
-    keyword: 'debug',
-    explanation: 'The process of figuring out why your program has a certain error and how to fix it',
-};
-let data2 = {
-    keyword: 'done',
-    explanation: 'When your task is complete, the only thing you have to do is to wait for users to use it (no additional codes or actions needed)',
-}
-let data3 = {
-    keyword: 'defect',
-    explanation: `The formal word for 'error'`,
-}
-let data4 = {
-    keyword: 'pm',
-    explanation: 'The short version  of Project Manager, the person in charge of the final result of a project',
-}
-let data5 = {
-    keyword: 'ui/ux',
-    explanation: 'UI means User Interface, UX mean User Experience, are the process to define how your products looks and feels',
-}
-var dictionary = [data1,data2,data3,data4,data5];
+
+var dictionary = [
+    {
+        keyword: 'debug',
+        explanation: 'The process of figuring out why your program has a certain error and how to fix it',
+    },
+    {
+        keyword: 'done',
+        explanation: 'When your task is complete, the only thing you have to do is to wait for users to use it (no additional codes or actions needed)',
+    },
+    {
+        keyword: 'defect',
+        explanation: `The formal word for 'error'`,
+    },
+    {
+        keyword: 'pm',
+        explanation: 'The short version  of Project Manager, the person in charge of the final result of a project',
+    },
+    {
+        keyword: 'ui/ux',
+        explanation: 'UI means User Interface, UX mean User Experience, are the process to define how your products looks and feels',
+    }
+];
 
 function cau4()
 {
