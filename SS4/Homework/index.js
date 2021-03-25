@@ -1098,36 +1098,36 @@ function cau4()
 
 function cau5()
 {
-    let products1 = {
-        name: 'Xiaomi portable charger 20000mah',
-        price: 428,
-        brand: 'Xiaomi',
-        category: 'Charger',
-        color: 'White',
-    };
-    let products2 = {
-        name: 'VSmart Active 1',
-        price: 5487,
-        brand: 'VSmart',
-        category: 'Phone',
-        color: 'Black',
-    }
-    let products3 = {
-        name: 'Iphone X',
-        price: 21490,
-        brand: 'Apple',
-        category: 'Phone',
-        color: 'Gray',
-    }
-    let products4 = {
-        name: 'SamSung Galaxy A9',
-        price: 8490,
-        brand: 'SamSung',
-        category: 'Phone',
-        color: 'Gray',
-    }
-    
-    var products = [products1,products2,products3,products4];
+    var products = [
+        {
+            name: 'Xiaomi portable charger 20000mah',
+            price: 428,
+            brand: 'Xiaomi',
+            category: 'Charger',
+            color: 'White',
+        },
+        {
+            name: 'VSmart Active 1',
+            price: 5487,
+            brand: 'VSmart',
+            category: 'Phone',
+            color: 'Black',
+        },
+        {
+            name: 'Iphone X',
+            price: 21490,
+            brand: 'Apple',
+            category: 'Phone',
+            color: 'Gray',
+        },
+        {
+            name: 'SamSung Galaxy A9',
+            price: 8490,
+            brand: 'SamSung',
+            category: 'Phone',
+            color: 'Gray',
+        },
+    ];
     //5.1
     // for(i=0;i<products.length;i++)
     // {
@@ -1146,23 +1146,83 @@ function cau5()
     // let pProduct = prompt('Enter product position');
     // let detail = products[pProduct-1];
     // console.clear();
-    // console.log(`Name: ${detail.name}`);
-    // console.log(`Brand: ${detail.brand}`);
-    // console.log(`Price: ${detail.price}`);
-    // console.log(`Color: ${detail.color}`);
-    // console.log(`Category: ${detail.category}`);
+    // for(let i in detail)
+    // {
+    //     console.log(`${i.charAt(0).toUpperCase()+i.slice(1)}: ${detail[i]}`);
+    // }
 
     //5.3
-    for(i=0;i<products.length;i++)
-    {
-        console.log(`Category: ${products[i].category}`);
+    // let c = 0;
+    // let enterCate = prompt('Enter product category').toLowerCase();
+    // console.clear();
+    // for(i=0;i<products.length;i++)
+    // {
+    //     let x = products[i].category;
+    //     x = x.toLowerCase();
+    //     if(enterCate==x)
+    //     {
+    //         console.log('--------------------------');
+    //         console.log(`Name: ${products[i].name}`);
+    //         console.log(`Price: ${products[i].price}`);
+    //     }
+    //     else
+    //     {
+    //         c = 1;
+    //         continue;
+    //     }
+    // }
+    // if(c==1)
+    // {
+    //     console.log('Category does not exist');
+    // }
+
+    //5.4   
+    // products[0].providers = ['Phukienzero','Dientuccc'];
+    // products[1].providers = ['TGDD','Ddghn','Vhstore'];
+    // products[2].providers = ['TGDD'];
+    // products[3].providers = ['TGDD'];
+
+    // for(i=0;i<products.length;i++)
+    // {
+    //     let {name, price, providers} = products[i];
+    //     console.log('--------------------------');
+    //     console.log(`Name: ${name}`);
+    //     console.log(`Price: ${price}`);
+    //     console.log(`Providers: ${providers.join(" ")}`);
+    // }
+    //5.5
+    products[0].providers = ['Phukienzero','Dientuccc'];
+    products[1].providers = ['TGDD','Ddghn','Vhstore'];
+    products[2].providers = ['TGDD'];
+    products[3].providers = ['TGDD'];
+    let enterProviders = prompt('Enter providers').toLowerCase();
+    
+    for(let i in products)
+    {     
+        
+        let x = products[i].providers;    
+        for(let y in x)
+        {      
+            if(enterProviders==x[y].toLowerCase())
+            { 
+                console.log('-------------------------------');
+                let detailProducts = products[i];
+                for(let j in detailProducts)
+                {
+                    console.log(`${j.charAt(0).toUpperCase()+j.slice(1)}: ${detailProducts[j]}`);
+                }
+            }
+            else
+            {
+                continue;
+            }
+        }
+        
+        
+        
     }
-    
-    let enterCate = prompt('Enter product category');
-    
-    let detailCate = products[enterCate-1];
-    console.clear();
 }
-cau5()
+
+cau5();
 
 
