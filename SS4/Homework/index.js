@@ -1213,12 +1213,191 @@ function cau5()
                 continue;
             }
         }
-        
-        
-        
     }
 }
 
-cau5();
+function cau6()
+{
+    var process = [
+        {
+            task: 'HTML',
+            complete: false,
+        },
+        {
+            task: 'CSS',
+            complete: false,
+        },
+        {
+            task: 'Basic of JavaScript',
+            complete: false,
+        },
+        {
+            task: 'Node Packed Manager (npm)',
+            complete: false,
+        },
+        {
+            task: 'Git',
+            complete: false,
+        },
+    ];
+    console.log('Hi there, this is your learning tasks to front-end developer career:');
+    function load()
+    {
+        for (i=0;i<process.length;i++)
+        {
+            console.log(`${i+1}. ${process[i].task}`);
+            console.log(`   Complete: ${process[i].complete}`)
+        }
+        console.log('-------------------------------------------------------------------------');
+    }
+    load()
+    
 
+    while(true)
+    {
+        let enterCommand = prompt('Enter your command (New , Delete, Update, Complete)')
+        if(enterCommand == null)
+        {
+            break;
+        }
+        else
+        {
+            enterCommand = enterCommand.toLowerCase();
+        }
+        switch(enterCommand)
+        {
+            case 'new':
+                while(true)
+                {
+                    let newTask = prompt('Enter new task:');
+                    switch(newTask)
+                    {
+                        case null:
+                        let cf = confirm('Want to exit?');
+                        if(cf)
+                        {
+                            break;
+                        }
+                        case '':
+                            alert('chưa nhập gì cả');
+                            continue;
+                        default:
+                            process.push({
+                                task:newTask,
+                                complete:false
+                            });
+                            alert('DONE');
+                            load();
+                            break; 
+                    }
+                    break;
+                }
+                break;
+            case 'delete':
+                while(true)
+                {
+                    let delTask = Number(prompt('Enter position task want to delete'));
+                    if(delTask>process.length)
+                    {
+                        alert(`Don't have position ${delTask}`);
+                        continue;
+                    }
+                    if(Number.isInteger(delTask))
+                    {
+                        switch(delTask)
+                        {
+                            case null:
+                                let cf = confirm('Want to exit?');
+                                if(cf)
+                                {
+                                    break;
+                                }
+                            case 0:
+                                alert('it null');
+                                continue;
+                            default:
+                                process.splice(delTask-1,1);
+                                alert('DONE');
+                                load();
+                                break;
+                        }
+                        break;
+                    }
+                }
+                break;  
+            case 'update':
+                while(true)
+                {
+                    let updTask = Number(prompt('Enter position task want to update'));
+                    if(updTask>process.length)
+                    {
+                        alert(`Don't have position ${updTask}`);
+                        continue;
+                    }
+                    if(Number.isInteger(updTask))
+                    {
+                        switch(updTask)
+                        {
+                            case null:
+                                let cf = confirm('Want to exit?');
+                                if(cf)
+                                {
+                                    break;
+                                }
+                            case 0:
+                                alert('it null');
+                                continue;
+                            default:
+                                let newTitle = prompt('Enter new title');
+                                process[updTask-1].task = newTitle;
+                                alert('DONE');
+                                load();
+                                break;
+                        }
+                        break;
+                    }
+                }
+                break;
+            case 'complete':
+                while(true)
+                {
+                    let completeTask = Number(prompt('Enter position'));
+                    if(completeTask>process.length)
+                    {
+                        alert(`Don't have position ${completeTask}`);
+                        continue;
+                    }
+                    if(Number.isInteger(completeTask))
+                    {
+                        switch(completeTask)
+                        {
+                            case null:
+                                let cf = confirm('Want to exit?');
+                                if(cf)
+                                {
+                                    break;
+                                }
+                            case 0:
+                                alert('it null');
+                                continue;
+                            default:
+                                process[completeTask-1].complete = true;
+                                alert('DONE');
+                                load();
+                                break;
+                        }
+                        break;
+                    }
+                }
+                break;
+            case '':
+                alert('chưa nhập gì là dở rồi');
+            case null:
+                break;
+            default:
+                alert('nhập sai là dở rồi');
+        }
+    }
+}
+cau6()
 
