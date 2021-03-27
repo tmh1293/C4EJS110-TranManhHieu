@@ -1,0 +1,59 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css");
+
+.right hr {width: 350px; margin-top: 20px;}
+.left hr {width: 200px;}
+h2 {color:brown; margin-left: 20px; line-height: 40px;}
+#template {
+    width: 700px;
+    height: 900px; 
+    background-color:khaki;
+    text-align: center;
+    margin-left: 740px; 
+    /*transition:all 1s 0.2s ease-in;*/
+}
+
+.hobby li{ float:left; list-style: none; text-align: center; font-size: 30px; width: 80px; color:crimson;}
+
+#template .left {
+    background-color: lightseagreen;
+    transition:all 1s 0.2s ease-in;
+    width: 280px;
+    height: 900px;
+    float:left;
+}
+
+#template .midleft .title {
+    color:white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    line-height: 10px;
+    margin-left:10px;
+}
+
+#template .midleft .subtitle {
+    color:white;
+    font-size: 14px;
+    text-align: left;
+    line-height: 6px;
+    margin-left:10px;
+}
+
+#template .midleft > table { margin-left:15px}
+#template .midleft td {text-align: left;}
+#template .midleft .skill {color:brown;}
+#template .midleft .name {color:brown;font-style: italic;}
+#template .left i {color:midnightblue;}
+#template .right {
+    margin-left: 280px;
+    width: 415px;
+    height: 900px;
+    text-align: left;
+}
+
+#template .right > .topright span {margin-left: 10px;color:crimson; font-size: 17px;}
+#template .right > .topright {margin-left: 10px;}
+
+#template .right > .midright {margin-left: 10px;}
+#template .right > .midright .title {font-style: italic; font-size: 16px;}
+#template .right > .midright .name {color: crimson;list-style: none; font-size: 17px;}
