@@ -159,7 +159,7 @@ function cau21()
             countWord[a]=1;
         }
     }
-    console.log(countWord.length);
+    console.log(countWord);
 
 }
 
