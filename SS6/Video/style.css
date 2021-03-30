@@ -1,0 +1,13 @@
+.cau1 > p {color: red;}
+.div2 {background-color: #00FF00;}
+.cau3 > p {font-size: 24px;}
+.cau3 > h2 {font-size: 24px;}
+.cau4 > div { font-size: 3em; background: wheat;}
+#div1 {font-size: 24px;}
+#div2 {font-size: 24px; color: blue;}
+#cau6 > a {color: yellow;}
+
+.cau7 > ul li {font-weight: bold;}
+
+.cau9 .item > span {font-size: 18px;}
+.cau9 .item div > span {font-style: italic;}
