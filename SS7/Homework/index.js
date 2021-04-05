@@ -22,7 +22,7 @@ cau2()
 
 function cau3()
 {
-    console.log('let + var đều không tồn tại khi khai báo trong 1 function')
+    console.log('let + var đều không tồn tại bên ngoài khi khai báo trong 1 function')
 }
 
 function cau4()
