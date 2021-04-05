@@ -1,3 +1,4 @@
+
 #header .headertop {
     background-color:cadetblue;
     display: flex;
@@ -21,6 +22,7 @@
     background-color: wheat;
     height: 150px;
     display: flex;
+    
 }
 
 #header .headermiddle .logo {
@@ -34,36 +36,21 @@
     height: 25px;
 }
 
-.bottomheader > .menu{
-    margin-top: -15px;
-}
-.bottomheader > .menu ul {
-    background:cadetblue;
-    list-style-type: none;
-    text-align: left;
-}
-.bottomheader > .menu li {
-    color: #f1f1f1;
-    display: inline-block;
-    width: 120px;
-    height: 40px;
-    line-height: 40px;
-    margin-left: 350px;
-}
-.bottomheader > .menu a {
-    text-decoration: none;
-    color: #fff;
-    display: block;
-    font-weight: bolder;
-    text-align: center;
-}
-.bottomheader > .menu a:hover {
-    background: #F1F1F1;
-    color: #333;
+.bottomheader > .menu ul{
+    
+    background-color: cadetblue;
+    list-style: none;
 }
 
-.bottomheader .sub-menu {
-    display: none;
-    position: absolute;
+.bottomheader > .menu a{
+    color: white;
 }
+
+
+
+
+
+
+
+
 
