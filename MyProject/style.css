@@ -19,10 +19,13 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p{
     
 }
 #logo {  
-    margin-top:20px;
-    margin-left: 10px;
+    margin-top:0px;
+    margin-left: 30px;
 }
 
+#logo img{  
+    height: 150px;
+}
 #header .top .center {
     position: relative;
     margin: 25px auto;
@@ -79,6 +82,7 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p{
     background-color: #1a7aa0;
     height: 40px;
     position: relative;
+    text-align: center;
 
 }
 #header .middle ul{
@@ -139,4 +143,10 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p{
 
 #mainbanner {
     text-align: center;
+}
+#mainbanner img{
+    width: 1200px;
+    height: auto;
+    min-width: none;
+    min-height: auto;
 }

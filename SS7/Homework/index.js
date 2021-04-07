@@ -81,7 +81,15 @@ function cau8(name,wish)
 function cau10(){
     let name = document.getElementById("name").value;
     var wish = document.getElementById("wish").value;
-    cau8(name,wish);
+    if(!wish)
+    {
+        alert('Bạn không có ước mơ');
+    }
+    else
+    {
+        cau8(name,wish);
+    }
+    
 }
 
 function cau11()
@@ -99,6 +107,7 @@ function cau11()
         divResult.innerHTML = nameInput1.value.toUpperCase(); //11.8
     })
 }
+cau11()
 var items = ['Backpack', 'Miband watch', 'Ring']; //12.1
 function cau12()
 {
@@ -106,24 +115,29 @@ function cau12()
     console.log(items);
     var ul = document.getElementById("item_list_ul");
     
+    
     for(let j = 0; j < items.length; j++){
             ul.insertAdjacentHTML('beforeend', `<li><span>${items[j]}</span><button>Remove</button></li>`);//12.12    
         }
 
-
-    var removebtn = ul.getElementsByTagName('button');//12.13
     var li = ul.getElementsByTagName('li');
-    console.log(li);
+    var removebtn = ul.getElementsByTagName('button');//12.13  
+    console.log(removebtn);
     for(let i = 0; i < removebtn.length; i++){   
         let itemName = items[i]; 
         
-        removebtn[i].addEventListener('click',()=>{
-            console.log(`Index:${i}`); //12.14     
+        removebtn[i].addEventListener('click',getClick );
+        function getClick()
+		{
+			console.log(`Index:${i}`); //12.14     
             items.splice(items.indexOf(itemName),1); //12.15
-            //li[i].remove();//12.16
-            console.log(items);    
-        })
+            li[i].remove();//12.16
+            
+            console.log(li);
+            console.log(items); 
+		}
     }
+
     
 
 
