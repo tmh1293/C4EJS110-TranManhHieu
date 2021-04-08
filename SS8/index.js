@@ -338,6 +338,7 @@ var inTime = document.getElementById("inputTime");
 var btnAdd = document.getElementById("btnAddtask");
 var btnClear = document.getElementById("btnClear");
 var body = document.getElementById("ts_tbody");
+var trbody = body.getElementsByTagName("tr");
 var index;
 
 function refreshtable()//
@@ -358,7 +359,7 @@ function refreshtable()//
 
 function cau4()
 {
-
+    console.log(trbody);
     for(i=0;i<timeSheetData.length;i++)
     {
         var project = timeSheetData[i].Project;
@@ -367,8 +368,10 @@ function cau4()
         body.insertAdjacentHTML('beforeend',`<tr id="tr${i}"><td>${project}</td><td>${task}</td><td>${timeSpend}</td></tr>`);
     }
     
-    var thead = document.getElementById("tr_thead");
-    thead.insertAdjacentHTML('beforeend',`<th>Action</th>`);
+    var thead = document.getElementById("thead");
+    console.log(thead);
+    var trheader = document.getElementById("t_header");
+    trheader.insertAdjacentHTML('beforeend',`<th>Action</th>`);
     for(j=0;j<timeSheetData.length;j++)
     {
         var addbtn=document.getElementById(`tr${j}`)
