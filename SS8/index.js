@@ -76,7 +76,11 @@ function cau2()
         time = setInterval(() => {
             if(kq2.innerText==0)
             {
-                clearInterval();
+                kq2.innerText =`Time's up`;
+                clearInterval(time);
+                btnStart.disabled = false;
+                btnStop.disabled = true;
+                input.disabled = false;           
             }
             else
             {
@@ -85,6 +89,7 @@ function cau2()
         }, 1000);
     })
 
+    
     btnStop.addEventListener('click',()=>{
         btnStart.disabled = false;
         btnStop.disabled = true;
@@ -440,6 +445,7 @@ function addupdate()
         refreshtable();
     }
 }
+
 cau1()
 cau2()
 cau3()
