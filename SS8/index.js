@@ -12,12 +12,14 @@ function cau1()
         {
             btn[i].addEventListener('click',()=>{
                 count.innerHTML--;
+                console.log(count);
             })
         }
         else
         {
             btn[i].addEventListener('click',()=>{
                 count.innerHTML++;
+                console.log(count);
             })
         }
     }
