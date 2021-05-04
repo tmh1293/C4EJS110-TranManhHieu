@@ -1,5 +1,5 @@
-const categoryhome = fetch('https://6070720985c3f00017470277.mockapi.io/api/shopmindx/category');
 const product = fetch('https://6070720985c3f00017470277.mockapi.io/api/shopmindx/product');
+let newProduct = document.getElementById('newProduct');
 var cart = []; // tạo mảng chứa các sản phẩm được thêm vào giỏ hàng
 document.cookie = `detailId=`;
 document.cookie = `categoryId=`;
@@ -7,14 +7,6 @@ async function loadhome()
 {
     const conn = await product;
     const data1 = await conn.json();
-    let ulmenu = document.getElementById('ul_menu');
-    console.log(data1);
-    let bdtitle = document.getElementById('bd_title');
-
-    
-    
-
-    let newProduct = document.getElementById('newProduct');
     for(let i = 0; i<16;i++) // load menu
     {
         newProduct.insertAdjacentHTML('beforeend',`
@@ -24,8 +16,7 @@ async function loadhome()
                 <a>${data1[i].productPrice} vnđ</a>
             </div>
         `);
-    }
-        
+    }    
 }
 
 function getCookie(cname) {

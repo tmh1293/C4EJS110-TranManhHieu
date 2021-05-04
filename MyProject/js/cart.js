@@ -1,4 +1,3 @@
-var cart = [];
 const product = fetch(`https://6070720985c3f00017470277.mockapi.io/api/shopmindx/product`);
 let tablecart = document.getElementById('cart');
 let totalelement = document.getElementById('total'); 
@@ -78,6 +77,8 @@ function checkCookie() // load các sản phẩm đã thêm vào giỏ hàng tr�
            cart.push(Number(ckCart[i]));
        }
    }
+   let cartIcon = document.getElementsByClassName('fa-shopping-cart')
+   cartIcon[0].insertAdjacentHTML('beforeend',`${cart.length}`)
 }
-checkCookie();
+
 loadCart();
