@@ -1,20 +1,25 @@
 //Câu 1
 function findOppositeNumber(n,inputNumber)
 {
-    if(inputNumber >= n) {
+    if(inputNumber >= n)
+    {
         console.log('inputnumber phải nằm trong khoảng từ 0 đến n-1');
     }
-    else if(n%2 == 0 && n >= 4 && n <= 20){
+    else if(n%2 == 0 && n >= 4 && n <= 20)
+    {
         let opposite;
-        if(inputNumber >= n/2){
+        if(inputNumber >= n/2)
+        {
             opposite = inputNumber - n/2;
         }
-        else{
+        else
+        {
             opposite = inputNumber + n/2;
         }
         console.log(opposite);
     }
-    else{
+    else
+    {
         console.log('n phải là số nguyên dương chẵn nằm trong khoảng từ 4 đến 20');
     }
 }
@@ -63,6 +68,7 @@ function cau3()
     let inputNumber = document.getElementById('inputNumber');
     let time = document.getElementById('time')
     let random = Math.floor(Math.random() * 10);
+    let turn = 3;
     time.innerText = 10;
     timer = setInterval(() => {
             if(time.innerText==0)
@@ -82,23 +88,23 @@ function cau3()
     }
     else
     {
-        let i = 2;
+        turn--;
         while(true)
         {
-            let reEnter = Number(prompt('Bạn đoán sai, mời nhập lại'))
-            if(i>0)
+            let reEnter = Number(prompt(`Bạn đoán sai, mời nhập lại\r\n Bạn còn ${turn} lượt`))
+            if(turn==1)
+            {
+                alert(`hết lượt đoán,kết quả là ${random}`);
+                break;
+            }
+            else
             {
                 if(reEnter == random)
                 {
                     alert(`Bạn đoán đúng, kết quả là ${random}`);
                     break;
                 }
-                i--;
-            }
-            else
-            {
-                alert(`hết lượt đoán,kết quả là ${random}`);
-                break;
+                turn--;
             }
         }
     }
